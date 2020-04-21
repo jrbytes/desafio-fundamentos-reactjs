@@ -1,4 +1,4 @@
 const formatValue = (value: number): string =>
-  Intl.NumberFormat().format(value); // TODO
+  `R$ ${Intl.NumberFormat().format(value)}`
 
-export default formatValue;
+export default formatValue

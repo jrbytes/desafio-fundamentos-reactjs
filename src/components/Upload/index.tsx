@@ -1,10 +1,10 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from 'react'
 
-import Dropzone from 'react-dropzone';
-import { DropContainer, UploadMessage } from './styles';
+import Dropzone from 'react-dropzone'
+import { DropContainer, UploadMessage } from './styles'
 
 interface UploadProps {
-  onUpload: Function;
+  onUpload: Function
 }
 
 const Upload: React.FC<UploadProps> = ({ onUpload }: UploadProps) => {
@@ -13,16 +13,14 @@ const Upload: React.FC<UploadProps> = ({ onUpload }: UploadProps) => {
     isDragRejest: boolean,
   ): ReactNode {
     if (!isDragActive) {
-      return (
-        <UploadMessage>Selecione ou arraste o arquivo aqui.</UploadMessage>
-      );
+      return <UploadMessage>Selecione ou arraste o arquivo aqui.</UploadMessage>
     }
 
     if (isDragRejest) {
-      return <UploadMessage type="error">Arquivo não suportado</UploadMessage>;
+      return <UploadMessage type="error">Arquivo não suportado</UploadMessage>
     }
 
-    return <UploadMessage type="success">Solte o arquivo aqui</UploadMessage>;
+    return <UploadMessage type="success">Solte o arquivo aqui</UploadMessage>
   }
 
   return (
@@ -40,7 +38,7 @@ const Upload: React.FC<UploadProps> = ({ onUpload }: UploadProps) => {
         )}
       </Dropzone>
     </>
-  );
-};
+  )
+}
 
-export default Upload;
+export default Upload
